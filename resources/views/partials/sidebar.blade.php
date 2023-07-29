@@ -49,18 +49,12 @@
             </a>
         </li>
         <!-- MASTER -->
-        <li class="menu-header small text-uppercase"><span class="menu-header-text">MASTER</span></li>
+        <li class="menu-header small text-uppercase"><span class="menu-header-text">Simulation</span></li>
         <!-- USER -->
         <li class="menu-item {{request()->routeIs('distribusi.index')  ? 'active' : ''}} " >
             <a href="{{route('distribusi.index')}}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-detail"></i>
-                <div data-i18n="Basic">Distribusi Permintaan</div>
-            </a>
-        </li>
-        <li class="menu-item {{request()->routeIs('prediksi.index') ? 'active' : '' }}">
-            <a href="{{route('prediksi.index')}}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-list-check"></i>
-                <div data-i18n="Boxicons">Prediksi Permintaan</div>
+                <div data-i18n="Basic">Monte Simulation</div>
             </a>
         </li>
 

@@ -36,11 +36,5 @@ Route::get('/', function () {
 
     Route::group(['prefix' => 'dashboard', 'middleware' => ['auth']],function (){
         route::get('/',[DashController::class,'dash'])->name('dash.index');
-        Route::controller(CarloDController::class)->group(function(){
-        route::get('distribusi/creaate','dcreate')->name('dcreate');
-        Route::post('distribusi/dstore','dstore')->name('dstore');
-        Route::delete('distribusi/{carloPD:id}/ddestroy','ddestroy')->name('ddestroy');
-        route::resource('distribusi',CarloDController::class)->parameter('distribusi','carloD');
-        });
-        route::resource('prediksi',CarloRController::class)->parameter('prediksi','carloR');
+        route::resource('distribusi',CarloDController::class)->only('index');
     });
